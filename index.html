@@ -1,298 +1,264 @@
-<!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PahamCepat - Platform Belajar Ekonomi Interaktif</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1d4ed8',
-                        'primary-dark': '#1e40af',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-slate-900 text-slate-100 antialiased font-sans">
-
-    <!-- Navigasi -->
-    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">P</div>
-                <span class="text-xl font-bold tracking-tight text-white">Paham<span class="text-blue-500">Cepat</span></span>
-            </div>
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
-                <a href="#modul-1" class="hover:text-blue-400 transition">Modul 1</a>
-                <a href="#modul-2" class="hover:text-blue-400 transition">Modul 2</a>
-                <a href="#modul-3" class="hover:text-blue-400 transition">Modul 3</a>
-                <a href="#modul-4" class="hover:text-blue-400 transition">Modul 4</a>
-                <a href="#simulasi-pasar" class="hover:text-blue-400 transition">Grafik Pasar</a>
-            </nav>
-            <div>
-                <a href="#simulasi-pasar" class="text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition shadow-sm">Buka Simulator</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-800 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-950/50 text-blue-400 text-xs font-semibold uppercase tracking-wider">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    Platform EduTech Ekonomi SMP, SMA & Olimpiade
-                </div>
-                <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">
-                    Analisis Pasar & Ekonomi Melalui <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">Grafik Kurva Hijau</span>
-                </h1>
-                <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto lg:mx-0">
-                    Pelajari teori ekonomi mikro dan makro lengkap dengan video materi, latihan soal kuis interaktif yang bisa dikerjakan berulang kali, serta grafik kurva finansial bernuansa hijau interaktif.
-                </p>
-                <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
-                    <a href="#modul-1" class="px-5 py-3 rounded-lg bg-blue-600 text-white font-semibold text-xs uppercase tracking-wider hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">
-                        Mulai Mengerjakan Kuis
-                    </a>
-                    <a href="#simulasi-pasar" class="px-5 py-3 rounded-lg border border-emerald-600/50 bg-emerald-950/30 text-emerald-300 font-semibold text-xs uppercase tracking-wider hover:bg-emerald-900/40 transition">
-                        Buka Grafik Kurva Hijau
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-2xl">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-                    <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span> INTERACTIVE TERMINAL
-                    </span>
-                    <span class="text-[11px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">STATUS: READY</span>
-                </div>
-                <div class="space-y-3 text-xs">
-                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
-                        <span class="text-slate-400">Latihan Soal Kuis</span>
-                        <span class="font-mono font-bold text-emerald-400">Aktif & Bisa Dikerjakan</span>
-                    </div>
-                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
-                        <span class="text-slate-400">Grafik Kurva Pasar</span>
-                        <span class="font-mono font-bold text-emerald-400">Dilengkapi Penjelasan Teks</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION MODUL & LATIHAN SOAL KUIS -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 space-y-16">
-
-        <!-- MODUL 1 -->
-        <section id="modul-1" class="bg-slate-950 border border-slate-800 rounded-2xl p-5 sm:p-8 shadow-xl">
-            <div class="border-b border-slate-800 pb-4 mb-6">
-                <span class="text-xs font-bold text-blue-400 bg-blue-950/70 border border-blue-800 px-2.5 py-1 rounded uppercase tracking-wider">Modul 01</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-white mt-2">Fondasi Ekonomi & Biaya Peluang</h2>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1">Kelangkaan sumber daya (*scarcity*), pilihan rasional, dan trade-off.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div class="lg:col-span-6 bg-slate-900 rounded-xl overflow-hidden border border-slate-800">
-                    <div class="relative pt-[56.25%]">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/3ez10ADR_gM" title="Intro to Economics" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-sm text-white">Video Modul 1: Dasar Pengambilan Keputusan</h4>
-                        <p class="text-xs text-slate-400 mt-1">Pembahasan alokasi sumber daya dan alternatif terbaik.</p>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-xs text-blue-400 uppercase tracking-wider">Latihan Soal Kuis Modul 01</h3>
-                        <button onclick="loadQuiz('m1')" class="text-[11px] bg-blue-600/80 hover:bg-blue-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
-                    </div>
-                    <div id="quiz-container-m1"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MODUL 2 -->
-        <section id="modul-2" class="bg-slate-950 border border-slate-800 rounded-2xl p-5 sm:p-8 shadow-xl">
-            <div class="border-b border-slate-800 pb-4 mb-6">
-                <span class="text-xs font-bold text-emerald-400 bg-emerald-950/70 border border-emerald-800 px-2.5 py-1 rounded uppercase tracking-wider">Modul 02</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-white mt-2">Mekanisme Pasar, Demand & Supply</h2>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1">Pembentukan kurva penawaran-permintaan serta kalkulasi elastisitas.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div class="lg:col-span-6 bg-slate-900 rounded-xl overflow-hidden border border-slate-800">
-                    <div class="relative pt-[56.25%]">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/g9aDizJpd_s" title="Supply and Demand" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-sm text-white">Video Modul 2: Supply and Demand Theory</h4>
-                        <p class="text-xs text-slate-400 mt-1">Visualisasi hukum permintaan dan pergeseran ekuilibrium.</p>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-xs text-emerald-400 uppercase tracking-wider">Latihan Soal Kuis Modul 02</h3>
-                        <button onclick="loadQuiz('m2')" class="text-[11px] bg-emerald-600/80 hover:bg-emerald-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
-                    </div>
-                    <div id="quiz-container-m2"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MODUL 3 -->
-        <section id="modul-3" class="bg-slate-950 border border-slate-800 rounded-2xl p-5 sm:p-8 shadow-xl">
-            <div class="border-b border-slate-800 pb-4 mb-6">
-                <span class="text-xs font-bold text-amber-400 bg-amber-950/70 border border-amber-800 px-2.5 py-1 rounded uppercase tracking-wider">Modul 03</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-white mt-2">Makroekonomi & Kebijakan Moneter-Fiskal</h2>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1">Pendapatan Nasional (GDP), inflasi, dan pengendalian suku bunga.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div class="lg:col-span-6 bg-slate-900 rounded-xl overflow-hidden border border-slate-800">
-                    <div class="relative pt-[56.25%]">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/d8uTB5XorBw" title="Macroeconomics" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-sm text-white">Video Modul 3: Macroeconomics & Monetary Policy</h4>
-                        <p class="text-xs text-slate-400 mt-1">Indikator makro dan respons bank sentral.</p>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-xs text-amber-400 uppercase tracking-wider">Latihan Soal Kuis Modul 03</h3>
-                        <button onclick="loadQuiz('m3')" class="text-[11px] bg-amber-600/80 hover:bg-amber-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
-                    </div>
-                    <div id="quiz-container-m3"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MODUL 4 -->
-        <section id="modul-4" class="bg-slate-950 border border-slate-800 rounded-2xl p-5 sm:p-8 shadow-xl">
-            <div class="border-b border-slate-800 pb-4 mb-6">
-                <span class="text-xs font-bold text-purple-400 bg-purple-950/70 border border-purple-800 px-2.5 py-1 rounded uppercase tracking-wider">Modul 04</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-white mt-2">Struktur Pasar & Persiapan Olimpiade</h2>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1">Pasar persaingan sempurna, monopoli, oligopoli, dan analisis produsen.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div class="lg:col-span-6 bg-slate-900 rounded-xl overflow-hidden border border-slate-800">
-                    <div class="relative pt-[56.25%]">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/9Hxy-TuX9fs" title="Market Structures" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h4 class="font-bold text-sm text-white">Video Modul 4: Market Structures Analysis</h4>
-                        <p class="text-xs text-slate-400 mt-1">Penentuan output dan harga pada berbagai struktur pasar.</p>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-xs text-purple-400 uppercase tracking-wider">Latihan Soal Kuis Modul 04</h3>
-                        <button onclick="loadQuiz('m4')" class="text-[11px] bg-purple-600/80 hover:bg-purple-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
-                    </div>
-                    <div id="quiz-container-m4"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION GRAFIK KURVA HIJAU & ANALISIS PASAR -->
-        <section id="simulasi-pasar" class="bg-slate-950 border border-emerald-800/40 rounded-3xl p-6 lg:p-8 shadow-2xl">
-            <div class="flex flex-wrap items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-3">
-                <div>
-                    <span class="text-xs font-bold text-emerald-300 bg-emerald-950 border border-emerald-700 px-3 py-1 rounded uppercase tracking-wider">Live Trading Chart</span>
-                    <h2 class="text-2xl font-black text-white mt-2">Grafik Kurva Hijau Interaktif & Analisis Pasar</h2>
-                </div>
-                <div class="flex items-center gap-4 text-xs font-mono">
-                    <span class="text-red-400 flex items-center gap-1.5"><span class="w-2.5 h-0.5 bg-red-500 inline-block"></span> DEMAND (D)</span>
-                    <span class="text-emerald-400 flex items-center gap-1.5"><span class="w-2.5 h-0.5 bg-emerald-400 inline-block"></span> SUPPLY (S - HIJAU)</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                <!-- Kanvas Grafik Kurva Warna Hijau Style -->
-                <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col items-center">
-                    <div class="w-full flex justify-between items-center text-[11px] font-mono text-slate-400 mb-2 px-1">
-                        <span>P (Price) vs Q (Volume)</span>
-                        <span class="text-emerald-400 animate-pulse">● KURVA HIJAU AKTIF</span>
-                    </div>
-                    <canvas id="marketCanvas" width="550" height="320" class="w-full bg-[#070b14] rounded-xl border border-emerald-900/50 shadow-inner"></canvas>
-                </div>
-
-                <!-- Panel Kontrol & Penjelasan Analisis Pergeseran Kurva -->
-                <div class="lg:col-span-5 bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-4">
-                    <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                        <span class="text-xs font-semibold text-slate-400">Geser Tingkat Harga (P)</span>
-                        <span id="label-harga" class="text-2xl font-mono font-black text-emerald-400">Rp 20.00</span>
-                    </div>
-
-                    <div>
-                        <input type="range" id="slider-harga" min="5" max="35" value="20" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500">
-                        <div class="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
-                            <span>Min: Rp 5</span>
-                            <span>Ekuilibrium: Rp 20</span>
-                            <span>Maks: Rp 35</span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-3 pt-1">
-                        <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl">
-                            <span class="text-[10px] text-slate-400 uppercase">Demand (Qd)</span>
-                            <p id="hasil-qd" class="text-lg font-mono font-bold text-red-400 mt-0.5">60 Unit</p>
-                        </div>
-                        <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl">
-                            <span class="text-[10px] text-slate-400 uppercase">Supply (Qs)</span>
-                            <p id="hasil-qs" class="text-lg font-mono font-bold text-emerald-400 mt-0.5">60 Unit</p>
-                        </div>
-                    </div>
-
-                    <div id="status-pasar" class="p-3 rounded-xl text-center text-xs font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
-                        STATUS: EKUILIBRIUM TERCAPAI
-                    </div>
-
-                    <!-- Kotak Penjelasan Teks Real-Time -->
-                    <div id="market-explanation" class="p-3 bg-slate-950 border border-emerald-900/40 rounded-xl text-xs text-slate-300 leading-relaxed space-y-1">
-                        <strong>Analisis Grafik (P = Rp 20):</strong> Pasar berada pada titik temu seimbang. Jumlah permintaan konsumen setara dengan penawaran produsen pada kurva hijau.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-8 border-t border-slate-800 text-center text-xs text-slate-500">
-        <p>&copy; 2026 PahamCepat. Platform Analisis & Pembelajaran Ekonomi Interaktif.</p>
-    </footer>
-
     <!-- Logic JavaScript Utama -->
     <script>
-        // Bank Soal Interaktif (Dinamis & Bisa Dikerjakan Berulang Kali)
+        // Bank Soal Lengkap untuk Modul 1, 2, 3, dan 4
         const bankSoal = {
             m1: [
                 {
-                    q: "Jika seorang siswa memilih belajar olimpiade selama 2 jam daripada bekerja paruh waktu dengan upah Rp 50.000/jam, berapa biaya peluangnya?",
+                    q: "Jika seorang siswa memilih belajar ekonomi selama 2 jam daripada bekerja paruh waktu dengan upah Rp 50.000/jam, berapa biaya peluangnya?",
                     options: [
                         { text: "A. Rp 50.000", correct: false },
                         { text: "B. Rp 100.000 (Pendapatan potensial yang dilepas)", correct: true },
-                        { text: "C. Rp 0", correct: false }
+                        { text: "C. Rp 0 karena belajar itu gratis", correct: false }
                     ],
-                    explanation: "Biaya peluang (opportunity cost) adalah nilai alternatif terbaik yang dikorbankan: 2 jam × Rp 50.000 = Rp 100.000."
+                    explanation: "Biaya peluang (opportunity cost) adalah nilai dari alternatif terbaik yang harus dikorbankan: 2 jam × Rp 50.000 = Rp 100.000."
                 },
                 {
-                    q: "Apa inti utama dari permasalahan ekonomi klasik yang dihadapi setiap masyarakat?",
+                    q: "Apa inti utama dari permasalahan ekonomi yang dihadapi oleh setiap individu maupun negara?",
                     options: [
-                        { text: "A. Kelangkaan sumber daya di tengah kebutuhan manusia yang tidak terbatas", correct: true },
-                        { text: "B. Terlalu banyaknya uang beredar di masyarakat", correct: false },
-                        { text: "C. Rendahnya pajak pemerintah", correct: false }
+                        { text: "A. Kelangkaan sumber daya di tengah kebutuhan manusia yang tak terbatas", correct: true },
+                        { text: "B. Terlalu banyaknya uang yang beredar di masyarakat", correct: false },
+                        { text: "C. Kurangnya campur tangan pemerintah dalam menetapkan harga", correct: false }
                     ],
-                    explanation: "Kelangkaan (scarcity) adalah inti masalah ekonomi karena alat pemuas kebutuhan sifatnya terbatas."
+                    explanation: "Kelangkaan (scarcity) adalah masalah fundamental ekonomi: alat pemuas kebutuhan terbatas, sedangkan kebutuhan manusia tidak terbatas."
                 }
             ],
             m2: [
                 {
-                    q: "Jika terjadi kemajuan teknologi produksi yang menekan biaya operasional secara drastis, bagaimana dampak langsungnya pada kurva penawaran?",
+                    q: "Jika terjadi kemajuan teknologi otomatisasi pabrik yang menekan biaya produksi secara drastis, bagaimana dampaknya pada kurva penawaran?",
                     options: [
-                        { text: "A. Kurva penawaran bergeser ke kanan (output bertambah)", correct: true },
-                 
+                        { text: "A. Kurva penawaran bergeser ke kanan (Supply bertambah pada setiap tingkat harga)", correct: true },
+                        { text: "B. Kurva penawaran bergeser ke kiri", correct: false },
+                        { text: "C. Terjadi pergerakan di sepanjang kurva tanpa adanya pergeseran", correct: false }
+                    ],
+                    explanation: "Faktor non-harga seperti kemajuan teknologi dan efisiensi biaya membuat produsen mampu memproduksi lebih banyak, sehingga kurva penawaran bergeser ke kanan."
+                },
+                {
+                    q: "Berdasarkan Hukum Permintaan (ceteris paribus), jika harga suatu barang mengalami kenaikan, maka...",
+                    options: [
+                        { text: "A. Jumlah barang yang diminta konsumen akan menurun", correct: true },
+                        { text: "B. Jumlah barang yang diminta konsumen akan meningkat drastis", correct: false },
+                        { text: "C. Kurva permintaan langsung bergeser ke kanan atas", correct: false }
+                    ],
+                    explanation: "Hukum permintaan menyatakan hubungan terbalik antara tingkat harga (P) dan jumlah barang yang diminta (Qd) saat faktor lain dianggap konstan."
+                }
+            ],
+            m3: [
+                {
+                    q: "Langkah kebijakan moneter kontraktif yang tepat diambil oleh Bank Sentral untuk meredam laju inflasi tinggi adalah...",
+                    options: [
+                        { text: "A. Menaikkan tingkat suku bunga acuan dan giro wajib minimum", correct: true },
+                        { text: "B. Menurunkan suku bunga agar masyarakat mudah mengambil pinjaman", correct: false },
+                        { text: "C. Mencetak uang baru dalam jumlah besar", correct: false }
+                    ],
+                    explanation: "Menaikkan suku bunga acuan menarik minat masyarakat untuk menabung dan menahan konsumsi/kredit, sehingga jumlah uang beredar berkurang dan inflasi terkendali."
+                },
+                {
+                    q: "Komponen perhitungan Pendapatan Nasional (GDP/PDB) dengan pendekatan pengeluaran terdiri dari...",
+                    options: [
+                        { text: "A. Konsumsi (C) + Investasi (I) + Pengeluaran Pemerintah (G) + Ekspor Neto (X - M)", correct: true },
+                        { text: "B. Upah + Sewa + Bunga + Laba Usaha", correct: false },
+                        { text: "C. Total Pajak + Subsidi - Utang Luar Negeri", correct: false }
+                    ],
+                    explanation: "Rumus pendekatan pengeluaran adalah GDP = C + I + G + (X - M)."
+                }
+            ],
+            m4: [
+                {
+                    q: "Ciri utama dari struktur Pasar Persaingan Sempurna yang membedakannya dengan Pasar Monopoli adalah...",
+                    options: [
+                        { text: "A. Penjual bertindak sebagai price taker dan barang yang dijual bersifat homogen", correct: true },
+                        { text: "B. Terdapat hambatan tinggi (barriers to entry) untuk produsen baru masuk", correct: false },
+                        { text: "C. Hanya ada satu produsen tunggal penentu harga pasar", correct: false }
+                    ],
+                    explanation: "Pada pasar persaingan sempurna, baik penjual maupun pembeli adalah penerima harga (price taker) karena banyaknya pelaku usaha dan produk yang seragam/homogen."
+                },
+                {
+                    q: "Kondisi laba maksimum (profit maximization) bagi produsen tercapai saat...",
+                    options: [
+                        { text: "A. Pendapatan Marjinal sama dengan Biaya Marjinal (MR = MC)", correct: true },
+                        { text: "B. Total Pendapatan sama dengan Total Biaya (TR = TC)", correct: false },
+                        { text: "C. Biaya Rata-Rata (AC) mencapai titik tertinggi", correct: false }
+                    ],
+                    explanation: "Aturan emas maksimisasi keuntungan bagi perusahaan di struktur pasar mana pun adalah memproduksi pada tingkat output saat Pendapatan Marjinal sama dengan Biaya Marjinal (MR = MC)."
+                }
+            ]
+        };
+
+        // State index kuis aktif
+        const quizState = { m1: 0, m2: 0, m3: 0, m4: 0 };
+
+        // Fungsi Render Kuis Interaktif
+        function loadQuiz(modulId) {
+            const container = document.getElementById(`quiz-container-${modulId}`);
+            if (!container) return;
+
+            const listSoal = bankSoal[modulId];
+            const currentIndex = quizState[modulId] % listSoal.length;
+            const dataSoal = listSoal[currentIndex];
+
+            let htmlOptions = '';
+            dataSoal.options.forEach((opt, idx) => {
+                htmlOptions += `
+                    <button onclick="checkAnswer('${modulId}', ${idx})" 
+                            id="btn-${modulId}-${idx}" 
+                            class="w-full text-left p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-xs hover:border-blue-500 transition mb-2">
+                        ${opt.text}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <p class="text-xs text-slate-200 font-semibold mb-3 leading-relaxed">${dataSoal.q}</p>
+                <div class="space-y-1">${htmlOptions}</div>
+                <div id="feedback-${modulId}" class="hidden p-3 rounded-lg text-xs mt-3 leading-relaxed"></div>
+            `;
+
+            // Geser index untuk klik tombol 'Soal Lainnya' berikutnya
+            quizState[modulId]++;
+        }
+
+        // Fungsi Evaluasi Jawaban Kuis
+        function checkAnswer(modulId, selectedIdx) {
+            const listSoal = bankSoal[modulId];
+            // Karena index sudah ditambah saat render, ambil index soal saat ini
+            const activeIdx = (quizState[modulId] - 1 + listSoal.length) % listSoal.length;
+            const dataSoal = listSoal[activeIdx];
+            const feedbackEl = document.getElementById(`feedback-${modulId}`);
+
+            dataSoal.options.forEach((opt, idx) => {
+                const btn = document.getElementById(`btn-${modulId}-${idx}`);
+                btn.disabled = true;
+                if (opt.correct) {
+                    btn.classList.add('bg-emerald-950/80', 'border-emerald-500', 'text-emerald-300');
+                } else if (idx === selectedIdx) {
+                    btn.classList.add('bg-red-950/80', 'border-red-500', 'text-red-300');
+                }
+            });
+
+            feedbackEl.classList.remove('hidden');
+            if (dataSoal.options[selectedIdx].correct) {
+                feedbackEl.className = "p-3 rounded-lg text-xs mt-3 bg-emerald-950/90 text-emerald-300 border border-emerald-600 block";
+                feedbackEl.innerHTML = `<strong>Benar!</strong> ${dataSoal.explanation}`;
+            } else {
+                feedbackEl.className = "p-3 rounded-lg text-xs mt-3 bg-red-950/90 text-red-300 border border-red-600 block";
+                feedbackEl.innerHTML = `<strong>Kurang tepat.</strong> ${dataSoal.explanation}`;
+            }
+        }
+
+        // LOGIKA GRAFIK PASAR & SIMULATOR HARGA
+        const canvas = document.getElementById('marketCanvas');
+        const ctx = canvas.getContext('2d');
+        const slider = document.getElementById('slider-harga');
+
+        function updateMarket(price) {
+            const p = parseFloat(price);
+            // Fungsi Permintaan: Qd = 100 - 2P
+            const qd = Math.max(0, 100 - (2 * p));
+            // Fungsi Penawaran: Qs = 3P
+            const qs = Math.max(0, 3 * p);
+
+            document.getElementById('label-harga').innerText = `Rp ${p.toFixed(2)}`;
+            document.getElementById('hasil-qd').innerText = `${qd.toFixed(0)} Unit`;
+            document.getElementById('hasil-qs').innerText = `${qs.toFixed(0)} Unit`;
+
+            const statusEl = document.getElementById('status-pasar');
+            const explanationEl = document.getElementById('market-explanation');
+
+            if (p === 20) {
+                statusEl.className = "p-3 rounded-xl text-center text-xs font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50";
+                statusEl.innerText = "STATUS: EKUILIBRIUM TERCAPAI (PASAR SEIMBANG)";
+                explanationEl.innerHTML = `<strong>Analisis Grafik (P = Rp 20):</strong> Pasar berada pada titik temu seimbang. Jumlah permintaan konsumen setara dengan penawaran produsen pada kurva hijau (Q = 60).`;
+            } else if (p > 20) {
+                statusEl.className = "p-3 rounded-xl text-center text-xs font-bold bg-amber-950/80 text-amber-300 border border-amber-700/50";
+                statusEl.innerText = "STATUS: SURPLUS PRODUSEN (KELEBIHAN PENAWARAN)";
+                explanationEl.innerHTML = `<strong>Analisis Grafik (P = Rp ${p}):</strong> Harga terlalu tinggi. Penawaran produsen (Qs = ${qs}) melebihi permintaan konsumen (Qd = ${qd}), memicu penumpukan stok barang di pasar.`;
+            } else {
+                statusEl.className = "p-3 rounded-xl text-center text-xs font-bold bg-red-950/80 text-red-300 border border-red-700/50";
+                statusEl.innerText = "STATUS: SHORTAGE (KELANGKAAN BARANG / KELEBIHAN PERMINTAAN)";
+                explanationEl.innerHTML = `<strong>Analisis Grafik (P = Rp ${p}):</strong> Harga terlalu rendah. Permintaan konsumen melonjak (Qd = ${qd}) sedangkan penawaran produsen rendah (Qs = ${qs}), memicu antrean dan kelangkaan barang.`;
+            }
+
+            drawChart(p, qd, qs);
+        }
+
+        function drawChart(currentP, currentQd, currentQs) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const w = canvas.width;
+            const h = canvas.height;
+            const pad = 45;
+
+            // Grid Lines
+            ctx.strokeStyle = '#1e293b';
+            ctx.lineWidth = 1;
+            for (let i = pad; i < w - pad; i += 50) {
+                ctx.beginPath();
+                ctx.moveTo(i, pad);
+                ctx.lineTo(i, h - pad);
+                ctx.stroke();
+            }
+            for (let j = pad; j < h - pad; j += 40) {
+                ctx.beginPath();
+                ctx.moveTo(pad, j);
+                ctx.lineTo(w - pad, j);
+                ctx.stroke();
+            }
+
+            // Sumbu X & Y
+            ctx.strokeStyle = '#64748b';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(pad, pad - 10);
+            ctx.lineTo(pad, h - pad);
+            ctx.lineTo(w - pad + 10, h - pad);
+            ctx.stroke();
+
+            // Label Sumbu
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '10px monospace';
+            ctx.fillText('P (Harga)', pad - 35, pad);
+            ctx.fillText('Q (Kuantitas)', w - pad - 30, h - pad + 25);
+
+            // Kurva Demand (Merah)
+            ctx.strokeStyle = '#f87171';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(pad + 20, pad + 20);
+            ctx.lineTo(w - pad - 20, h - pad - 20);
+            ctx.stroke();
+            ctx.fillStyle = '#f87171';
+            ctx.fillText('Demand (D)', w - pad - 60, h - pad - 30);
+
+            // Kurva Supply (Hijau Emerald Neon)
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(pad + 20, h - pad - 20);
+            ctx.lineTo(w - pad - 20, pad + 20);
+            ctx.stroke();
+            ctx.fillStyle = '#10b981';
+            ctx.fillText('Supply (S)', w - pad - 60, pad + 30);
+
+            // Garis Posisi Titik Harga Saat Ini
+            const priceY = (h - pad) - ((currentP / 40) * (h - 2 * pad));
+            ctx.strokeStyle = '#38bdf8';
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.moveTo(pad, priceY);
+            ctx.lineTo(w - pad, priceY);
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+
+        // Event Listener & Inisialisasi Pertama
+        slider.addEventListener('input', (e) => updateMarket(e.target.value));
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadQuiz('m1');
+            loadQuiz('m2');
+            loadQuiz('m3');
+            loadQuiz('m4');
+            updateMarket(20);
+        });
+    </script>
+</body>
+</html>
