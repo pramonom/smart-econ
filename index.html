@@ -22,16 +22,19 @@
 <body class="bg-slate-50 text-slate-900 antialiased font-sans">
 
     <!-- Navigasi -->
-    <header class="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-0 z-50">
+    <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-2">
                 <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">P</div>
                 <span class="text-xl font-bold tracking-tight text-blue-950">Paham<span class="text-blue-600">Cepat</span></span>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="#kurikulum" class="hover:text-blue-600 transition">Kurikulum</a>
-                <a href="#video-pembelajaran" class="hover:text-blue-600 transition">Video Pembelajaran</a>
-                <a href="#modul-interaktif" class="hover:text-blue-600 transition">Modul Interaktif</a>
+                <a href="#kurikulum" class="hover:text-blue-600 transition">Daftar Modul</a>
+                <a href="#modul-1" class="hover:text-blue-600 transition">Modul 1</a>
+                <a href="#modul-2" class="hover:text-blue-600 transition">Modul 2</a>
+                <a href="#modul-3" class="hover:text-blue-600 transition">Modul 3</a>
+                <a href="#modul-4" class="hover:text-blue-600 transition">Modul 4</a>
+                <a href="#simulasi-grafik" class="hover:text-blue-600 transition">Grafik Interaktif</a>
             </nav>
             <div class="flex items-center space-x-3">
                 <a href="#kurikulum" class="text-sm font-medium px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition shadow-sm">Mulai Belajar</a>
@@ -43,212 +46,226 @@
     <section class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-200 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Kolom Teks -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-xs font-semibold uppercase tracking-wider">
                     <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                    Untuk Siswa SMP, SMA & Persiapan Olimpiade
+                    Edisi Siswa SMP, SMA & Persiapan Olimpiade
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                    Kuasai Konsep <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Ekonomi</span> Tanpa Hafalan Rumit
+                    Kuasai Konsep <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Ekonomi</span> Mandiri & Terstruktur
                 </h1>
                 
                 <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal">
-                    Pelajari dasar mikro, analisis pasar, hingga ekonomi makro tingkat lanjut lewat visualisasi kurva terpandu dan video pembelajaran terstruktur.
+                    Setiap modul terintegrasi lengkap dengan ringkasan konsep, video pembelajaran YouTube khusus, kuis instan, dan grafik visual interaktif.
                 </p>
 
-                <!-- Tombol Navigasi Aktif -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                     <a href="#kurikulum" class="px-6 py-3.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition shadow-md hover:shadow-lg text-center">
-                        Eksplorasi Kurikulum
+                        Eksplorasi Kurikulum & Modul
                     </a>
-                    <a href="#modul-interaktif" class="px-6 py-3.5 rounded-lg border border-slate-300 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 transition text-center flex items-center justify-center gap-2">
-                        <span>Lihat Modul Interaktif</span>
+                    <a href="#simulasi-grafik" class="px-6 py-3.5 rounded-lg border border-slate-300 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 transition text-center flex items-center justify-center gap-2">
+                        <span>Lihat Grafik Dinamis</span>
                         <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                 </div>
 
-                <!-- Ringkasan Statistik -->
                 <div class="pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 text-center sm:text-left">
                     <div>
-                        <p class="text-2xl font-bold text-slate-900">40+</p>
-                        <p class="text-xs text-slate-500">Topik Terstruktur</p>
+                        <p class="text-2xl font-bold text-slate-900">4 Modul</p>
+                        <p class="text-xs text-slate-500">Video & Latihan</p>
                     </div>
                     <div>
-                        <p class="text-2xl font-bold text-slate-900">100%</p>
-                        <p class="text-xs text-slate-500">Visual Kurva Terpadu</p>
+                        <p class="text-2xl font-bold text-slate-900">Grafik 2D</p>
+                        <p class="text-xs text-slate-500">Simulasi Dinamis</p>
                     </div>
                     <div>
                         <p class="text-2xl font-bold text-slate-900">Gratis</p>
-                        <p class="text-xs text-slate-500">Akses Belajar Mandiri</p>
+                        <p class="text-xs text-slate-500">Akses Mandiri</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Preview Singkat Hero -->
             <div class="lg:col-span-5">
                 <div class="w-full bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
                     <div class="flex items-center justify-between pb-3 border-b border-slate-800">
-                        <span class="text-xs font-mono text-blue-400">Pusat Studi Terpadu</span>
-                        <span class="text-xs bg-blue-900/60 text-blue-300 px-2.5 py-1 rounded-full font-medium">Level 1 - Level 4</span>
+                        <span class="text-xs font-mono text-blue-400">Silabus Terpadu</span>
+                        <span class="text-xs bg-blue-900/60 text-blue-300 px-2.5 py-1 rounded-full font-medium">Lengkap</span>
                     </div>
-                    <p class="text-sm text-slate-300">Akses materi kurva ekuilibrium pasar, elastisitas, kebijakan moneter/fiskal, hingga latihan analisis olimpiade ekonomi.</p>
-                    <a href="#video-pembelajaran" class="block text-center w-full py-2.5 bg-blue-600 hover:bg-blue-500 rounded-lg text-xs font-semibold uppercase tracking-wider text-white transition">
-                        Buka Video Materi YouTube
-                    </a>
+                    <p class="text-sm text-slate-300">Pilih modul di bawah untuk mempelajari video pembahasannya dan mengevaluasi pemahaman secara mandiri.</p>
+                    <div class="grid grid-cols-2 gap-2 pt-2 text-xs">
+                        <a href="#modul-1" class="p-2.5 bg-slate-800 rounded-lg text-center hover:bg-blue-600 transition">Modul 1: Fondasi</a>
+                        <a href="#modul-2" class="p-2.5 bg-slate-800 rounded-lg text-center hover:bg-blue-600 transition">Modul 2: Pasar</a>
+                        <a href="#modul-3" class="p-2.5 bg-slate-800 rounded-lg text-center hover:bg-blue-600 transition">Modul 3: Makro</a>
+                        <a href="#modul-4" class="p-2.5 bg-slate-800 rounded-lg text-center hover:bg-blue-600 transition">Modul 4: Kompetisi</a>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Bagian 1: Eksplorasi Kurikulum -->
-    <section id="kurikulum" class="py-16 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-bold text-slate-900">Kurikulum & Alur Pembelajaran</h2>
-            <p class="text-slate-600 text-sm mt-2">Disusun bertahap dari pemahaman konsep dasar SMP/SMA hingga level analitis kompetisi.</p>
+    <!-- Ringkasan Kurikulum -->
+    <section id="kurikulum" class="py-14 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-bold text-slate-900">Alur Kurikulum Pembelajaran</h2>
+            <p class="text-slate-600 text-sm mt-2">Daftar silabus materi terstruktur:</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded">Modul 01</span>
-                <h3 class="text-lg font-bold text-slate-900 mt-4">Fondasi & Masalah Ekonomi</h3>
-                <p class="text-xs text-slate-500 mt-2">Kelangkaan (Scarcity), Biaya Peluang (Opportunity Cost), dan Sistem Perekonomian.</p>
-                <ul class="text-xs text-slate-600 mt-4 space-y-1.5 list-disc pl-4">
-                    <li>Prinsip Dasar Ekonomi</li>
-                    <li>Sistem Ekonomi Pasar vs Komando</li>
-                </ul>
-            </div>
-
-            <div class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition border-blue-200 ring-1 ring-blue-100">
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded">Modul 02</span>
-                <h3 class="text-lg font-bold text-slate-900 mt-4">Mekanisme Pasar & Kurva</h3>
-                <p class="text-xs text-slate-500 mt-2">Permintaan, Penawaran, Titik Keseimbangan (Ekuilibrium), dan Elastisitas Harga.</p>
-                <ul class="text-xs text-slate-600 mt-4 space-y-1.5 list-disc pl-4">
-                    <li>Pergeseran vs Pergerakan Kurva</li>
-                    <li>Kalkulasi Elastisitas Titik & Busur</li>
-                </ul>
-            </div>
-
-            <div class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded">Modul 03</span>
-                <h3 class="text-lg font-bold text-slate-900 mt-4">Makroekonomi & Kebijakan</h3>
-                <p class="text-xs text-slate-500 mt-2">Pendapatan Nasional, Inflasi, Tingkat Pengangguran, serta Kebijakan Fiskal & Moneter.</p>
-                <ul class="text-xs text-slate-600 mt-4 space-y-1.5 list-disc pl-4">
-                    <li>Perhitungan PDB (GDP) 3 Pendekatan</li>
-                    <li>Instrumen Bank Sentral</li>
-                </ul>
-            </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="#modul-1" class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm hover:border-blue-500 hover:shadow-md transition block">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">MODUL 01</span>
+                <h3 class="text-base font-bold text-slate-900 mt-3">Fondasi & Masalah Ekonomi</h3>
+                <p class="text-xs text-slate-500 mt-1">Kelangkaan, Opportunity Cost, dan Sistem Ekonomi.</p>
+            </a>
+            <a href="#modul-2" class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm hover:border-blue-500 hover:shadow-md transition block">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">MODUL 02</span>
+                <h3 class="text-base font-bold text-slate-900 mt-3">Mekanisme Pasar & Kurva</h3>
+                <p class="text-xs text-slate-500 mt-1">Permintaan, Penawaran, Ekuilibrium, dan Elastisitas.</p>
+            </a>
+            <a href="#modul-3" class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm hover:border-blue-500 hover:shadow-md transition block">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">MODUL 03</span>
+                <h3 class="text-base font-bold text-slate-900 mt-3">Makroekonomi & Kebijakan</h3>
+                <p class="text-xs text-slate-500 mt-1">PDB (GDP), Inflasi, Kebijakan Fiskal dan Moneter.</p>
+            </a>
+            <a href="#modul-4" class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm hover:border-blue-500 hover:shadow-md transition block">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">MODUL 04</span>
+                <h3 class="text-base font-bold text-slate-900 mt-3">Struktur Pasar & Kompetisi</h3>
+                <p class="text-xs text-slate-500 mt-1">Pasar Persaingan Sempurna, Monopoli, dan Olimpiade.</p>
+            </a>
         </div>
     </section>
 
-    <!-- Bagian 2: Video Pembelajaran YouTube -->
-    <section id="video-pembelajaran" class="py-16 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-slate-900">Video Pembelajaran Interaktif</h2>
-                <p class="text-slate-600 text-sm mt-2">Pelajari materi langsung melalui video YouTube kurasi konsep ekonomi berikut:</p>
+    <!-- AREA DETAIL MODUL & KUIS -->
+    <div class="max-w-7xl mx-auto px-6 space-y-16 pb-16">
+
+        <!-- MODUL 1 -->
+        <section id="modul-1" class="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
+            <div class="border-b border-slate-100 pb-4 mb-6">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Modul 01</span>
+                <h2 class="text-2xl font-bold text-slate-900 mt-2">Fondasi Ekonomi & Biaya Peluang</h2>
+                <p class="text-sm text-slate-600">Memahami konsep kelangkaan sumber daya, trade-off, dan opportunity cost.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Video 1 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-6 bg-slate-50 rounded-xl overflow-hidden border border-slate-200">
                     <div class="relative pt-[56.25%]">
-                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/g9aDizJpd_s" title="Crash Course Economics" allowfullscreen></iframe>
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/3ez10ADR_gM" title="Intro to Economics" allowfullscreen></iframe>
                     </div>
-                    <div class="p-5">
-                        <span class="text-xs font-semibold text-blue-600">Dasar Mikroekonomi</span>
-                        <h3 class="text-base font-bold text-slate-900 mt-1">Supply and Demand: Crash Course Economics</h3>
-                        <p class="text-xs text-slate-500 mt-1">Penjelasan visual mengenai hukum permintaan, penawaran, dan bagaimana harga pasar terbentuk.</p>
+                    <div class="p-4">
+                        <h4 class="font-bold text-sm text-slate-900">Video Pembahasan: Introduction to Economics</h4>
+                        <p class="text-xs text-slate-500 mt-1">Membahas dasar pengambilan keputusan ekonomi dan alokasi sumber daya langka.</p>
                     </div>
                 </div>
 
-                <!-- Video 2 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                <div class="lg:col-span-6 bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                    <h3 class="font-bold text-sm text-blue-900 uppercase tracking-wider mb-3">Kuis Evaluasi Modul 01</h3>
+                    <p class="text-sm font-medium text-slate-800 mb-4">
+                        Jika seorang siswa memilih untuk belajar olimpiade selama 2 jam daripada bekerja paruh waktu dengan upah Rp 50.000/jam, berapakah biaya peluangnya?
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <button onclick="checkQuiz('m1', 'A', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m1-btn" data-opt="A">A. Rp 50.000</button>
+                        <button onclick="checkQuiz('m1', 'B', true)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m1-btn" data-opt="B">B. Rp 100.000</button>
+                        <button onclick="checkQuiz('m1', 'C', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m1-btn" data-opt="C">C. Rp 0 (karena untuk belajar)</button>
+                    </div>
+                    <div id="m1-result" class="hidden mt-4 p-3 rounded-lg text-xs font-semibold"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODUL 2 -->
+        <section id="modul-2" class="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
+            <div class="border-b border-slate-100 pb-4 mb-6">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Modul 02</span>
+                <h2 class="text-2xl font-bold text-slate-900 mt-2">Mekanisme Pasar, Permintaan, & Penawaran</h2>
+                <p class="text-sm text-slate-600">Analisis pergeseran kurva supply-demand dan perhitungan elastisitas harga.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-6 bg-slate-50 rounded-xl overflow-hidden border border-slate-200">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/g9aDizJpd_s" title="Supply and Demand" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-sm text-slate-900">Video Pembahasan: Supply & Demand</h4>
+                        <p class="text-xs text-slate-500 mt-1">Pembentukan kurva ekuilibrium harga dan kuantitas di pasar.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                    <h3 class="font-bold text-sm text-blue-900 uppercase tracking-wider mb-3">Kuis Evaluasi Modul 02</h3>
+                    <p class="text-sm font-medium text-slate-800 mb-4">
+                        Apa yang terjadi pada kurva penawaran suatu komoditas jika terjadi peningkatan teknologi produksi yang lebih efisien?
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <button onclick="checkQuiz('m2', 'A', true)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m2-btn" data-opt="A">A. Kurva penawaran bergeser ke kanan (jumlah penawaran meningkat)</button>
+                        <button onclick="checkQuiz('m2', 'B', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m2-btn" data-opt="B">B. Kurva penawaran bergeser ke kiri</button>
+                        <button onclick="checkQuiz('m2', 'C', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m2-btn" data-opt="C">C. Hanya bergerak di sepanjang kurva tanpa bergeser</button>
+                    </div>
+                    <div id="m2-result" class="hidden mt-4 p-3 rounded-lg text-xs font-semibold"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODUL 3 -->
+        <section id="modul-3" class="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
+            <div class="border-b border-slate-100 pb-4 mb-6">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Modul 03</span>
+                <h2 class="text-2xl font-bold text-slate-900 mt-2">Makroekonomi, PDB & Kebijakan Fiskal-Moneter</h2>
+                <p class="text-sm text-slate-600">Pengukuran pendapatan nasional, pengendalian laju inflasi, dan instrumen moneter bank sentral.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-6 bg-slate-50 rounded-xl overflow-hidden border border-slate-200">
                     <div class="relative pt-[56.25%]">
                         <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/d8uTB5XorBw" title="Macroeconomics Intro" allowfullscreen></iframe>
                     </div>
-                    <div class="p-5">
-                        <span class="text-xs font-semibold text-blue-600">Dasar Makroekonomi</span>
-                        <h3 class="text-base font-bold text-slate-900 mt-1">Macroeconomics: GDP, Inflasi, dan Kebijakan Moneter</h3>
-                        <p class="text-xs text-slate-500 mt-1">Memahami indikator ekonomi agregat dan pengaruh kebijakan suku bunga pada perekonomian.</p>
+                    <div class="p-4">
+                        <h4 class="font-bold text-sm text-slate-900">Video Pembahasan: Macroeconomics & GDP</h4>
+                        <p class="text-xs text-slate-500 mt-1">Konsep pertumbuhan ekonomi, inflasi, dan stabilisasi pasar agregat.</p>
                     </div>
+                </div>
+
+                <div class="lg:col-span-6 bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                    <h3 class="font-bold text-sm text-blue-900 uppercase tracking-wider mb-3">Kuis Evaluasi Modul 03</h3>
+                    <p class="text-sm font-medium text-slate-800 mb-4">
+                        Manakah dari langkah berikut yang merupakan kebijakan moneter kontraktif untuk meredam inflasi tinggi?
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <button onclick="checkQuiz('m3', 'A', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m3-btn" data-opt="A">A. Menurunkan suku bunga acuan bank sentral</button>
+                        <button onclick="checkQuiz('m3', 'B', true)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m3-btn" data-opt="B">B. Menaikkan suku bunga acuan dan menaikkan rasio cadangan wajib</button>
+                        <button onclick="checkQuiz('m3', 'C', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m3-btn" data-opt="C">C. Meningkatkan belanja pemerintah untuk subsidi</button>
+                    </div>
+                    <div id="m3-result" class="hidden mt-4 p-3 rounded-lg text-xs font-semibold"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Bagian 3: Modul Interaktif Simulasi Kurva -->
-    <section id="modul-interaktif" class="py-16 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-bold text-slate-900">Modul Simulasi Interaktif</h2>
-            <p class="text-slate-600 text-sm mt-2">Uji pengaruh perubahan harga pasar terhadap jumlah permintaan dan penawaran secara langsung.</p>
-        </div>
-
-        <div class="max-w-2xl mx-auto bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm">
-            <h3 class="text-lg font-bold text-slate-900 mb-1">Simulasi Titik Ekuilibrium Pasar</h3>
-            <p class="text-xs text-slate-500 mb-6">Fungsi Permintaan: Qd = 100 - 2P | Fungsi Penawaran: Qs = 20 + 2P</p>
-
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Pilih Tingkat Harga (P): <span id="label-harga" class="text-blue-600 font-bold text-sm">Rp 20</span></label>
-                    <input type="range" id="slider-harga" min="5" max="35" value="20" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100 text-center">
-                    <div class="bg-blue-50 p-4 rounded-xl">
-                        <p class="text-xs text-slate-500">Jumlah Permintaan (Qd)</p>
-                        <p id="hasil-qd" class="text-2xl font-extrabold text-blue-700">60 Unit</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl">
-                        <p class="text-xs text-slate-500">Jumlah Penawaran (Qs)</p>
-                        <p id="hasil-qs" class="text-2xl font-extrabold text-slate-800">60 Unit</p>
-                    </div>
-                </div>
-
-                <div id="status-pasar" class="p-3.5 rounded-xl text-center text-xs font-semibold bg-green-100 text-green-800 border border-green-200">
-                    Kondisi Pasar: Ekuilibrium Tercapai (Qd = Qs)
-                </div>
+        <!-- MODUL 4 -->
+        <section id="modul-4" class="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
+            <div class="border-b border-slate-100 pb-4 mb-6">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wider">Modul 04</span>
+                <h2 class="text-2xl font-bold text-slate-900 mt-2">Struktur Pasar & Analisis Tingkat Lanjut</h2>
+                <p class="text-sm text-slate-600">Karakteristik pasar persaingan sempurna, monopoli, oligopoli, dan pemecahan kasus analitis.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-slate-200 bg-white text-center text-xs text-slate-500">
-        <p>&copy; 2026 PahamCepat. Platform Pembelajaran Ekonomi Terstruktur.</p>
-    </footer>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-6 bg-slate-50 rounded-xl overflow-hidden border border-slate-200">
+                    <div class="relative pt-[56.25%]">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/9Hxy-TuX9fs" title="Market Structures" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-sm text-slate-900">Video Pembahasan: Market Structures & Monopolies</h4>
+                        <p class="text-xs text-slate-500 mt-1">Perbandingan penetapan harga dan output di pasar persaingan vs monopoli.</p>
+                    </div>
+                </div>
 
-    <!-- Script Sederhana untuk Modul Interaktif -->
-    <script>
-        const slider = document.getElementById('slider-harga');
-        const labelHarga = document.getElementById('label-harga');
-        const hasilQd = document.getElementById('hasil-qd');
-        const hasilQs = document.getElementById('hasil-qs');
-        const statusPasar = document.getElementById('status-pasar');
-
-        slider.addEventListener('input', function() {
-            const P = parseInt(this.value);
-            labelHarga.textContent = 'Rp ' + P;
-
-            // Perhitungan Fungsi
-            const Qd = Math.max(0, 100 - (2 * P));
-            const Qs = Math.max(0, 20 + (2 * P));
-
-            hasilQd.textContent = Qd + ' Unit';
-            hasilQs.textContent = Qs + ' Unit';
-
-            if (Qd === Qs) {
-                statusPasar.className = 'p-3.5 rounded-xl text-center text-xs font-semibold bg-green-100 text-green-800 border border-green-200';
-                statusPasar.textContent = 'Kondisi Pasar: Ekuilibrium Tercapai (Qd = Qs)';
-            } else if (Qd > Qs) {
-                statusPasar.className = 'p-3.5 rounded-xl text-center text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200';
-                statusPasar.textContent = 'Kondisi Pasar: Excess Demand / Kelangkaan Barang (Qd > Qs)';
-            } else {
-                statusPasar.className = 'p-3.5 rounded-xl text-center text-xs font-semibold bg-red-100 text-red-800 border border-red-200';
-                statusPasar.textContent = 'Kondisi Pasar: Excess Supply / Surplus Barang (Qs > Qd)';
-            }
-        });
-    </script>
-</body>
-</html>
+                <div class="lg:col-span-6 bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                    <h3 class="font-bold text-sm text-blue-900 uppercase tracking-wider mb-3">Kuis Evaluasi Modul 04</h3>
+                    <p class="text-sm font-medium text-slate-800 mb-4">
+                        Dalam pasar persaingan sempurna dalam jangka panjang, sebuah perusahaan akan memproduksi output pada saat kondisi:
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <button onclick="checkQuiz('m4', 'A', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m4-btn" data-opt="A">A. P > MC</button>
+                        <button onclick="checkQuiz('m4', 'B', true)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 transition m4-btn" data-opt="B">B. P = MR = MC = Titik Terendah AC (Laba Ekonomi Nol)</button>
+                        <button onclick="checkQuiz('m4', 'C', false)" class="w-full text-left p-3 rounded-lg bg-white border border-slate-200 hover:bg-sla                                    
