@@ -1,5 +1,4 @@
-                
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -110,7 +109,7 @@
                 <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="font-bold text-xs text-blue-400 uppercase tracking-wider">Latihan Soal Kuis Modul 01</h3>
-                        <button onclick="loadQuiz('m1')" class="text-[11px] bg-blue-600/80 hover:bg-blue-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
+                        <button onclick="nextQuiz('m1')" class="text-[11px] bg-blue-600 hover:bg-blue-500 text-white font-medium px-2.5 py-1 rounded transition cursor-pointer">Soal Lainnya ⟳</button>
                     </div>
                     <div id="quiz-container-m1"></div>
                 </div>
@@ -137,7 +136,7 @@
                 <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="font-bold text-xs text-emerald-400 uppercase tracking-wider">Latihan Soal Kuis Modul 02</h3>
-                        <button onclick="loadQuiz('m2')" class="text-[11px] bg-emerald-600/80 hover:bg-emerald-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
+                        <button onclick="nextQuiz('m2')" class="text-[11px] bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-2.5 py-1 rounded transition cursor-pointer">Soal Lainnya ⟳</button>
                     </div>
                     <div id="quiz-container-m2"></div>
                 </div>
@@ -164,7 +163,7 @@
                 <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="font-bold text-xs text-amber-400 uppercase tracking-wider">Latihan Soal Kuis Modul 03</h3>
-                        <button onclick="loadQuiz('m3')" class="text-[11px] bg-amber-600/80 hover:bg-amber-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
+                        <button onclick="nextQuiz('m3')" class="text-[11px] bg-amber-600 hover:bg-amber-500 text-white font-medium px-2.5 py-1 rounded transition cursor-pointer">Soal Lainnya ⟳</button>
                     </div>
                     <div id="quiz-container-m3"></div>
                 </div>
@@ -191,7 +190,7 @@
                 <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-5 rounded-xl">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="font-bold text-xs text-purple-400 uppercase tracking-wider">Latihan Soal Kuis Modul 04</h3>
-                        <button onclick="loadQuiz('m4')" class="text-[11px] bg-purple-600/80 hover:bg-purple-600 text-white px-2.5 py-1 rounded transition">Soal Lainnya ⟳</button>
+                        <button onclick="nextQuiz('m4')" class="text-[11px] bg-purple-600 hover:bg-purple-500 text-white font-medium px-2.5 py-1 rounded transition cursor-pointer">Soal Lainnya ⟳</button>
                     </div>
                     <div id="quiz-container-m4"></div>
                 </div>
@@ -212,14 +211,18 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <!-- Kanvas Grafik Kurva Pasar -->
                 <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col items-center">
                     <div class="w-full flex justify-between items-center text-[11px] font-mono text-slate-400 mb-2 px-1">
                         <span>P (Price) vs Q (Volume)</span>
                         <span class="text-emerald-400 animate-pulse">● KURVA HIJAU AKTIF</span>
                     </div>
-                    <canvas id="marketCanvas" width="550" height="320" class="w-full bg-[#070b14] rounded-xl border border-emerald-900/50 shadow-inner"></canvas>
+                    <div class="w-full aspect-[16/10] relative">
+                        <canvas id="marketCanvas" width="600" height="360" class="w-full h-full bg-[#070b14] rounded-xl border border-emerald-900/50 shadow-inner"></canvas>
+                    </div>
                 </div>
 
+                <!-- Panel Kontrol & Penjelasan Analisis Real-Time -->
                 <div class="lg:col-span-5 bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-4">
                     <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                         <span class="text-xs font-semibold text-slate-400">Geser Tingkat Harga (P)</span>
@@ -227,7 +230,7 @@
                     </div>
 
                     <div>
-                        <input type="range" id="slider-harga" min="5" max="35" value="20" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                        <input type="range" id="slider-harga" min="5" max="35" step="1" value="20" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500">
                         <div class="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
                             <span>Min: Rp 5</span>
                             <span>Ekuilibrium: Rp 20</span>
@@ -246,12 +249,13 @@
                         </div>
                     </div>
 
-                    <div id="status-pasar" class="p-3 rounded-xl text-center text-xs font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
+                    <div id="status-pasar" class="p-3 rounded-xl text-center text-xs font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50 transition-all duration-200">
                         STATUS: EKUILIBRIUM TERCAPAI
                     </div>
 
+                    <!-- Kotak Penjelasan Teks Real-Time -->
                     <div id="market-explanation" class="p-3 bg-slate-950 border border-emerald-900/40 rounded-xl text-xs text-slate-300 leading-relaxed space-y-1">
-                        <strong>Analisis Grafik (P = Rp 20):</strong> Pasar berada pada titik temu seimbang. Jumlah permintaan konsumen setara dengan penawaran produsen pada kurva hijau.
+                        <strong>Analisis Grafik (P = Rp 20):</strong> Pasar berada pada titik temu seimbang. Jumlah permintaan konsumen setara dengan penawaran produsen pada kurva hijau (Q = 60).
                     </div>
                 </div>
             </div>
@@ -266,7 +270,7 @@
 
     <!-- Logic JavaScript Utama -->
     <script>
-        // Bank Soal Lengkap: 5 Soal Tiap Modul
+        // 1. Bank Soal Lengkap: 5 Soal Terstruktur per Modul
         const bankSoal = {
             m1: [
                 {
@@ -276,7 +280,7 @@
                         { text: "B. Rp 100.000 (Pendapatan potensial yang dilepas)", correct: true },
                         { text: "C. Rp 0 karena belajar menambah wawasan", correct: false }
                     ],
-                    explanation: "Biaya peluang (opportunity cost) adalah nilai dari alternatif terbaik yang dikorbankan: 2 jam × Rp 50.000 = Rp 100.000."
+                    explanation: "Biaya peluang (opportunity cost) adalah nilai alternatif terbaik yang dikorbankan: 2 jam × Rp 50.000 = Rp 100.000."
                 },
                 {
                     q: "Inti masalah ekonomi mendasar yang dihadapi oleh setiap individu maupun negara adalah...",
@@ -288,8 +292,369 @@
                     explanation: "Kelangkaan (scarcity) muncul karena alat pemuas kebutuhan sifatnya terbatas sedangkan kebutuhan manusia tidak terbatas."
                 },
                 {
-                    q: "Kurva Kemungkinan Produksi (Production Possibility Frontier / PPF) yang melengkung keluar (concave) mencerminkan fenomena...",
+                    q: "Kurva Kemungkinan Produksi (PPF) yang berbentuk melengkung keluar (concave) mencerminkan fenomena...",
                     options: [
                         { text: "A. Biaya peluang konstan (Constant Opportunity Cost)", correct: false },
                         { text: "B. Kenaikan biaya peluang (Law of Increasing Opportunity Cost)", correct: true },
-                        { text: "C. Tingkat pengangguran yang menurun secara permanen", correc
+                        { text: "C. Tingkat pengangguran yang menurun secara permanen", correct: false }
+                    ],
+                    explanation: "Bentuk PPF yang cekung menggambarkan meningkatnya biaya peluang saat realokasi sumber daya dilakukan antar dua barang."
+                },
+                {
+                    q: "Pernyataan ekonomi berikut yang tergolong ke dalam analisis 'Ekonomi Positif' adalah...",
+                    options: [
+                        { text: "A. Pemerintah seharusnya menghapus seluruh pajak bahan pokok", correct: false },
+                        { text: "B. Kenaikan tarif PPN menjadi 12% menurunkan daya beli riil masyarakat", correct: true },
+                        { text: "C. Upah minimum buruh sebaiknya dinaikkan dua kali lipat demi keadilan", correct: false }
+                    ],
+                    explanation: "Ekonomi positif berfokus pada fakta sebab-akibat objektif ('apa yang terjadi'), sedangkan normatif berdasar opini/nilai etika."
+                },
+                {
+                    q: "Tiga masalah pokok ekonomi modern mencakup pertanyaan mendasar yaitu...",
+                    options: [
+                        { text: "A. What, How, dan For Whom barang diproduksi", correct: true },
+                        { text: "B. Why, When, dan Where komoditas dijual", correct: false },
+                        { text: "C. How much, Who, dan When anggaran dialokasikan", correct: false }
+                    ],
+                    explanation: "Masalah pokok ekonomi modern adalah Apa (What), Bagaimana (How), dan Untuk Siapa (For Whom) komoditas dihasilkan."
+                }
+            ],
+            m2: [
+                {
+                    q: "Jika terjadi kemajuan teknologi otomatisasi pabrik yang menekan biaya produksi secara drastis, dampaknya pada kurva penawaran adalah...",
+                    options: [
+                        { text: "A. Kurva penawaran bergeser ke kanan (Supply bertambah)", correct: true },
+                        { text: "B. Kurva penawaran bergeser ke kiri (Supply berkurang)", correct: false },
+                        { text: "C. Terjadi pergerakan ke atas di sepanjang kurva penawaran", correct: false }
+                    ],
+                    explanation: "Efisiensi dan teknologi menurunkan biaya per unit sehingga menggeser kurva penawaran ke kanan pada setiap tingkat harga."
+                },
+                {
+                    q: "Berdasarkan Hukum Permintaan (ceteris paribus), jika harga suatu barang mengalami kenaikan, maka...",
+                    options: [
+                        { text: "A. Jumlah barang yang diminta konsumen akan menurun", correct: true },
+                        { text: "B. Jumlah barang yang diminta konsumen akan meningkat drastis", correct: false },
+                        { text: "C. Kurva permintaan bergeser ke kanan atas secara permanen", correct: false }
+                    ],
+                    explanation: "Hukum permintaan menyatakan hubungan berbanding terbalik antara tingkat harga (P) dengan kuantitas yang diminta (Qd)."
+                },
+                {
+                    q: "Kenaikan harga barang X sebesar 10% mengakibatkan penurunan permintaan barang Y sebesar 15%. Hubungan antara barang X dan Y adalah...",
+                    options: [
+                        { text: "A. Barang Komplementer (Elastisitas Silang Negatif)", correct: true },
+                        { text: "B. Barang Substitusi (Elastisitas Silang Positif)", correct: false },
+                        { text: "C. Barang Inferior yang berdiri sendiri", correct: false }
+                    ],
+                    explanation: "Elastisitas silang bertanda negatif menandakan barang komplementer (saling melengkapi dalam konsumsi)."
+                },
+                {
+                    q: "Kebijakan batas harga tertinggi (Price Ceiling) yang ditetapkan di bawah harga ekuilibrium pasar akan memicu kondisi...",
+                    options: [
+                        { text: "A. Kelebihan pasokan produsen (Surplus)", correct: false },
+                        { text: "B. Kelangkaan barang di pasar (Shortage / Excess Demand)", correct: true },
+                        { text: "C. Keseimbangan baru tanpa kerugian bobot mati", correct: false }
+                    ],
+                    explanation: "Harga pagu yang murah menaikkan permintaan namun menekan pasokan produsen sehingga memicu kelangkaan (shortage)."
+                },
+                {
+                    q: "Suatu barang memiliki koefisien elastisitas permintaan |Ed| = 0.2. Karakteristik barang tersebut tergolong...",
+                    options: [
+                        { text: "A. Inelastis (Perubahan kuantitas relatif lebih kecil dibanding perubahan harga)", correct: true },
+                        { text: "B. Elastis Sempurna", correct: false },
+                        { text: "C. Elastis Uniter", correct: false }
+                    ],
+                    explanation: "Nilai elastisitas |Ed| < 1 tergolong inelastis, biasanya berupa kebutuhan pokok yang respon perubahannya rendah."
+                }
+            ],
+            m3: [
+                {
+                    q: "Langkah kebijakan moneter kontraktif yang tepat diambil Bank Sentral guna meredam laju inflasi tinggi adalah...",
+                    options: [
+                        { text: "A. Menaikkan tingkat suku bunga acuan dan Giro Wajib Minimum", correct: true },
+                        { text: "B. Menurunkan suku bunga kredit perbankan", correct: false },
+                        { text: "C. Membeli obligasi dan surat utang secara masif di pasar", correct: false }
+                    ],
+                    explanation: "Menaikkan suku bunga acuan menarik uang beredar masuk ke tabungan perbankan dan menahan laju konsumsi/kredit."
+                },
+                {
+                    q: "Perhitungan Pendapatan Nasional (GDP) melalui pendekatan pengeluaran dihitung menggunakan formula...",
+                    options: [
+                        { text: "A. GDP = Konsumsi (C) + Investasi (I) + Belanja Pemerintah (G) + Ekspor Neto (X - M)", correct: true },
+                        { text: "B. GDP = Upah + Sewa + Bunga Modal + Laba Pengusaha", correct: false },
+                        { text: "C. GDP = Pendapatan Pribadi - Pajak Langsung", correct: false }
+                    ],
+                    explanation: "Rumus pendekatan pengeluaran adalah GDP = C + I + G + (X - M)."
+                },
+                {
+                    q: "Jika perekonomian mengalami kelesuan dan pertumbuhan melambat, kebijakan fiskal ekspansif yang sesuai diterapkan adalah...",
+                    options: [
+                        { text: "A. Menurunkan tarif pajak dan menambah belanja proyek stimulus", correct: true },
+                        { text: "B. Memangkas subsidi energi dan menaikkan tarif PPN", correct: false },
+                        { text: "C. Menghentikan seluruh bantuan sosial masyarakat", correct: false }
+                    ],
+                    explanation: "Fiskal ekspansif bertujuan merangsang aggregate demand lewat penurunan pajak dan penambahan belanja pemerintah."
+                },
+                {
+                    q: "Inflasi yang terjadi akibat lonjakan biaya energi dan kelangkaan bahan baku impor dinamakan...",
+                    options: [
+                        { text: "A. Cost-Push Inflation", correct: true },
+                        { text: "B. Demand-Pull Inflation", correct: false },
+                        { text: "C. Spiral Hyperinflation", correct: false }
+                    ],
+                    explanation: "Cost-push inflation terjadi ketika kenaikan biaya input produksi mendesak kurva penawaran agregat bergeser ke kiri."
+                },
+                {
+                    q: "Operasi Bank Sentral dalam mengendalikan likuiditas dengan menjual surat berharga kepada perbankan disebut...",
+                    options: [
+                        { text: "A. Operasi Pasar Terbuka (Open Market Operations)", correct: true },
+                        { text: "B. Kebijakan Diskonto", correct: false },
+                        { text: "C. Imbauan Moral Formal", correct: false }
+                    ],
+                    explanation: "Operasi Pasar Terbuka adalah instrumen utama moneter melalui transaksi surat berharga negara."
+                }
+            ],
+            m4: [
+                {
+                    q: "Ciri fundamental dari struktur Pasar Persaingan Sempurna yang membedakannya dengan Pasar Monopoli adalah...",
+                    options: [
+                        { text: "A. Produsen bertindak sebagai penerima harga (price taker) dan produk homogen", correct: true },
+                        { text: "B. Adanya hambatan masuk pasar yang tidak dapat ditembus", correct: false },
+                        { text: "C. Kurva permintaan individual perusahaan berlereng negatif curam", correct: false }
+                    ],
+                    explanation: "Pada pasar persaingan sempurna, banyaknya penjual dan produk yang seragam membuat setiap produsen menjadi price taker."
+                },
+                {
+                    q: "Kondisi optimalisasi laba maksimum (profit maximization) bagi produsen tercapai saat tingkat output berada pada posisi...",
+                    options: [
+                        { text: "A. Pendapatan Marjinal sama dengan Biaya Marjinal (MR = MC)", correct: true },
+                        { text: "B. Total Penerimaan sama dengan Total Biaya Operasional (TR = TC)", correct: false },
+                        { text: "C. Biaya Rata-rata (Average Cost) mencapai titik tertinggi", correct: false }
+                    ],
+                    explanation: "Aturan emas maksimisasi keuntungan di pasar mana pun adalah memproduksi saat MR = MC."
+                },
+                {
+                    q: "Karakteristik khas dari Pasar Oligopoli yang membedakannya dari bentuk pasar lain adalah...",
+                    options: [
+                        { text: "A. Ketergantungan strategis antarpersaingan segelintir produsen (interdependence)", correct: true },
+                        { text: "B. Tidak adanya kebutuhan biaya promosi dan branding", correct: false },
+                        { text: "C. Kemudahan mutlak keluar-masuk pasar tanpa modal", correct: false }
+                    ],
+                    explanation: "Oligopoli dikuasai segelintir perusahaan besar yang gerak strategis harga dan output-nya saling memengaruhi."
+                },
+                {
+                    q: "Praktik penjualan barang yang sama dengan tarif berbeda kepada kelompok konsumen berbeda dinamakan...",
+                    options: [
+                        { text: "A. Diskriminasi Harga (Price Discrimination)", correct: true },
+                        { text: "B. Kebijakan Dumping Subsidi", correct: false },
+                        { text: "C. Penetapan Tarif Predator", correct: false }
+                    ],
+                    explanation: "Diskriminasi harga dilakukan penjual berkekuatan monopoli untuk menyerap surplus konsumen berdasarkan elastisitas."
+                },
+                {
+                    q: "Dalam jangka panjang, perusahaan yang beroperasi pada Pasar Persaingan Monopolistik akan memperoleh laba berupa...",
+                    options: [
+                        { text: "A. Laba Normal (Normal Profit / Zero Economic Profit)", correct: true },
+                        { text: "B. Laba Supernormal permanen", correct: false },
+                        { text: "C. Kerugian operasional tetap", correct: false }
+                    ],
+                    explanation: "Kebebasan keluar-masuk pasar (free entry/exit) mengikis keuntungan lebih hingga hanya tersisa laba normal dalam jangka panjang."
+                }
+            ]
+        };
+
+        // 2. State & Engine Kuis
+        const quizCurrentIndices = { m1: 0, m2: 0, m3: 0, m4: 0 };
+
+        function renderQuiz(modulId) {
+            const container = document.getElementById(`quiz-container-${modulId}`);
+            if (!container) return;
+
+            const list = bankSoal[modulId];
+            const activeIdx = quizCurrentIndices[modulId];
+            const data = list[activeIdx];
+
+            let htmlButtons = '';
+            data.options.forEach((opt, idx) => {
+                htmlButtons += `
+                    <button type="button" onclick="submitAnswer('${modulId}', ${idx})" id="opt-${modulId}-${idx}" 
+                            class="w-full text-left p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-200 hover:border-blue-500 hover:bg-slate-900 transition-all mb-2 cursor-pointer">
+                        ${opt.text}
+                    </button>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-[10px] font-mono text-slate-400">Soal ${activeIdx + 1} dari ${list.length}</span>
+                </div>
+                <p class="text-xs text-slate-100 font-semibold mb-3 leading-relaxed">${data.q}</p>
+                <div class="space-y-1">${htmlButtons}</div>
+                <div id="feedback-${modulId}" class="hidden p-3 rounded-lg text-xs mt-3 leading-relaxed"></div>
+            `;
+        }
+
+        function nextQuiz(modulId) {
+            quizCurrentIndices[modulId] = (quizCurrentIndices[modulId] + 1) % bankSoal[modulId].length;
+            renderQuiz(modulId);
+        }
+
+        function submitAnswer(modulId, selectedIdx) {
+            const activeIdx = quizCurrentIndices[modulId];
+            const data = bankSoal[modulId][activeIdx];
+            const feedbackEl = document.getElementById(`feedback-${modulId}`);
+
+            // Nonaktifkan tombol dan beri styling status benar/salah
+            data.options.forEach((opt, idx) => {
+                const btn = document.getElementById(`opt-${modulId}-${idx}`);
+                if (!btn) return;
+                btn.disabled = true;
+                btn.classList.remove('hover:border-blue-500', 'hover:bg-slate-900', 'cursor-pointer');
+                
+                if (opt.correct) {
+                    btn.className = "w-full text-left p-2.5 rounded-lg bg-emerald-950/80 border border-emerald-500 text-emerald-300 text-xs mb-2 font-medium";
+                } else if (idx === selectedIdx) {
+                    btn.className = "w-full text-left p-2.5 rounded-lg bg-red-950/80 border border-red-500 text-red-300 text-xs mb-2 font-medium";
+                }
+            });
+
+            feedbackEl.classList.remove('hidden');
+            if (data.options[selectedIdx].correct) {
+                feedbackEl.className = "p-3 rounded-lg text-xs mt-3 bg-emerald-950/90 text-emerald-300 border border-emerald-600 block";
+                feedbackEl.innerHTML = `<strong>Tepat!</strong> ${data.explanation}`;
+            } else {
+                feedbackEl.className = "p-3 rounded-lg text-xs mt-3 bg-red-950/90 text-red-300 border border-red-600 block";
+                feedbackEl.innerHTML = `<strong>Kurang tepat.</strong> ${data.explanation}`;
+            }
+        }
+
+        // 3. Engine Kanvas Simulasi Grafik Pasar Interaktif
+        const canvas = document.getElementById('marketCanvas');
+        const ctx = canvas.getContext('2d');
+        const slider = document.getElementById('slider-harga');
+
+        function updateMarket(priceVal) {
+            const p = parseFloat(priceVal);
+            // Model: Qd = 100 - 2P ; Qs = 3P
+            const qd = Math.max(0, 100 - (2 * p));
+            const qs = Math.max(0, 3 * p);
+
+            document.getElementById('label-harga').innerText = `Rp ${p.toFixed(2)}`;
+            document.getElementById('hasil-qd').innerText = `${qd.toFixed(0)} Unit`;
+            document.getElementById('hasil-qs').innerText = `${qs.toFixed(0)} Unit`;
+
+            const statusEl = document.getElementById('status-pasar');
+            const explanationEl = document.getElementById('market-explanation');
+
+            if (p === 20) {
+                statusEl.className = "p-3 rounded-xl text-center text-xs font-bold bg-emerald-950/90 text-emerald-300 border border-emerald-600";
+                statusEl.innerText = "STATUS: EKUILIBRIUM TERCAPAI (PASAR SEIMBANG)";
+                explanationEl.innerHTML = `<strong>Analisis Grafik (P = Rp 20):</strong> Titik temu kurva penawaran hijau dan permintaan merah tercapai pada kuantitas 60 unit. Tidak ada surplus maupun kelangkaan barang.`;
+            } else if (p > 20) {
+                statusEl.className = "p-3 rounded-xl text-center text-xs font-bold bg-amber-950/90 text-amber-300 border border-amber-600";
+                statusEl.innerText = `STATUS: SURPLUS PRODUSEN (+${(qs - qd).toFixed(0)} Unit)`;
+                explanationEl.innerHTML = `<strong>Analisis Grafik (P = Rp ${p}):</strong> Harga di atas ekuilibrium membuat produsen menawarkan barang melimpah (Qs = ${qs}) melebihi daya serap pembeli (Qd = ${qd}), mengakibatkan penumpukan stok.`;
+            } else {
+                statusEl.className = "p-3 rounded-xl text-center text-xs font-bold bg-red-950/90 text-red-300 border border-red-600";
+                statusEl.innerText = `STATUS: SHORTAGE / KELANGKAAN (-${(qd - qs).toFixed(0)} Unit)`;
+                explanationEl.innerHTML = `<strong>Analisis Grafik (P = Rp ${p}):</strong> Harga di bawah ekuilibrium memicu lonjakan permintaan (Qd = ${qd}) sedangkan penawaran produsen minim (Qs = ${qs}), memicu antrean dan kelangkaan di pasar.`;
+            }
+
+            renderChart(p);
+        }
+
+        function renderChart(currentP) {
+            const w = canvas.width;
+            const h = canvas.height;
+            const padLeft = 55;
+            const padBottom = 40;
+            const padTop = 25;
+            const padRight = 30;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // Grid background
+            ctx.strokeStyle = '#1e293b';
+            ctx.lineWidth = 1;
+            for (let x = padLeft; x <= w - padRight; x += 55) {
+                ctx.beginPath();
+                ctx.moveTo(x, padTop);
+                ctx.lineTo(x, h - padBottom);
+                ctx.stroke();
+            }
+            for (let y = padTop; y <= h - padBottom; y += 45) {
+                ctx.beginPath();
+                ctx.moveTo(padLeft, y);
+                ctx.lineTo(w - padRight, y);
+                ctx.stroke();
+            }
+
+            // Sumbu X (Q) dan Sumbu Y (P)
+            ctx.strokeStyle = '#64748b';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(padLeft, padTop - 5);
+            ctx.lineTo(padLeft, h - padBottom);
+            ctx.lineTo(w - padRight + 10, h - padBottom);
+            ctx.stroke();
+
+            // Label Sumbu
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '11px monospace';
+            ctx.fillText('P (Harga)', padLeft - 48, padTop + 5);
+            ctx.fillText('Q (Kuantitas)', w - padRight - 65, h - padBottom + 25);
+
+            // Kurva Demand (Merah)
+            ctx.strokeStyle = '#f87171';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(padLeft + 15, padTop + 15);
+            ctx.lineTo(w - padRight - 20, h - padBottom - 15);
+            ctx.stroke();
+            ctx.fillStyle = '#f87171';
+            ctx.font = 'bold 11px sans-serif';
+            ctx.fillText('Demand (D)', w - padRight - 85, h - padBottom - 25);
+
+            // Kurva Supply (Hijau Neon)
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(padLeft + 15, h - padBottom - 15);
+            ctx.lineTo(w - padRight - 20, padTop + 15);
+            ctx.stroke();
+            ctx.fillStyle = '#10b981';
+            ctx.font = 'bold 11px sans-serif';
+            ctx.fillText('Supply (S)', w - padRight - 80, padTop + 30);
+
+            // Garis Indikator Harga P Saat Ini
+            const plotHeight = (h - padBottom) - padTop;
+            const priceY = (h - padBottom) - ((currentP / 40) * plotHeight);
+
+            ctx.strokeStyle = '#38bdf8';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(padLeft, priceY);
+            ctx.lineTo(w - padRight, priceY);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Titik Indikator Sumbu Harga
+            ctx.fillStyle = '#38bdf8';
+            ctx.beginPath();
+            ctx.arc(padLeft, priceY, 4, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // 4. Inisialisasi Saat Halaman Selesai Dimuat
+        slider.addEventListener('input', (e) => updateMarket(e.target.value));
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderQuiz('m1');
+            renderQuiz('m2');
+            renderQuiz('m3');
+            renderQuiz('m4');
+            updateMarket(20);
+        });
+    </script>
+</body>
+</html>
